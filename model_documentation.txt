@@ -1,0 +1,30 @@
+
+# Mobile Money Churn Prediction Model
+## Version 1.2 - Deployed August 2024
+
+### Model Performance (Training Set)
+- Algorithm: Gradient Boosted Trees (XGBoost)
+- Accuracy: 87%
+- Precision: 0.82
+- Recall: 0.79
+- AUC-ROC: 0.91
+
+### Features Used (in order of importance):
+1. avg_monthly_transactions
+2. avg_transaction_value  
+3. days_since_last_transaction
+4. account_age_days
+5. age
+6. county (one-hot encoded)
+7. wallet_balance
+
+### Training Details:
+- Training period: January - June 2024
+- Training samples: 45,000 customers
+- Validation approach: 80/20 split
+- Churn definition: No transactions for 90 days
+
+### Deployment:
+- Predictions run weekly
+- Customers with probability > 0.6 flagged for retention campaigns
+- Integration: Real-time API + batch scoring
