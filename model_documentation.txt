@@ -1,4 +1,4 @@
-
+# OLD MODEL
 # Mobile Money Churn Prediction Model
 ## Version 1.2 - Deployed August 2024
 
@@ -28,3 +28,41 @@
 - Predictions run weekly
 - Customers with probability > 0.6 flagged for retention campaigns
 - Integration: Real-time API + batch scoring
+
+
+
+
+# NEW MODEL
+# Mobile Money Churn Prediction Model
+# Version 2.0 - Optimized (February 2026)
+
+### Model Performance (Test Set)
+-Algorithm: Tuned Gradient Boosted Trees (XGBoost)
+-Best Parameters: learning_rate: 0.03, max_depth: 4, n_estimators: 150, subsample: 0.8
+-Accuracy: 69%
+-Precision (Churn): 0.46
+-Recall (Churn): 0.66
+-F1-Score: 0.54
+
+### Features Used (Top 10 by Importance):
+1.avg_monthly_transactions (Primary Driver)
+2.days_since_last_transaction
+3.avg_transaction_value
+4.wallet_balance
+5.tx_coverage (New: Balance vs. Avg Spend)
+6.activity_intensity (New: Monthly tx vs. Tenure)
+7.behavioral_deviation (New: Gap vs. Usual Habits)
+8.county_Nairobi
+9.county_Uasin Gishu
+10.county_Kisumu
+
+### Training Details:
+    -Training Samples: 4,000 customers (80/20 Stratified Split)
+    -Class Handling: scale_pos_weight: 2.66 (Corrects for 73/27 class imbalance)
+    -Validation Approach: 3-Fold Cross-Validation (Grid Search)
+    -Churn Definition: actual_churned (Binary Boolean)
+
+### Deployment Strategy:
+    -Optimization Goal: Balanced F1-Score (Capturing the most churners without excessive false alarms).
+    -Classification Threshold: 0.60 (Optimized for business balance).
+    -Retention Strategy: Customers in the top 20th percentile of churn probability are prioritized for high-touch intervention.
