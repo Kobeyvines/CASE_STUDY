@@ -1,6 +1,8 @@
-pandas
 numpy
+pandas
 matplotlib
 seaborn
+missingno
 scikit-learn
+xgboost
 ipykernel

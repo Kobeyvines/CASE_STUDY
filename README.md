@@ -1,6 +1,6 @@
 # Churn Prediction Case Study: Mobile Money Analytics
 
-This repository presents a data science case study focused on diagnosing and improving a churn prediction model for a leading mobile money platform. It includes exploratory data analysis (EDA), detection of data leakage, and rebuilding a robust ML pipeline.
+This repository presents a data science case study focused on investigating,diagnosing and improving a churn prediction model for a leading mobile money platform. It includes exploratory data analysis (EDA), rebuilding the model and validating it's performance.
 
 ## Project Structure
 
@@ -68,8 +68,8 @@ data/01-raw/
 
 ## Key Insights
 
-- Original model accuracy was inflated by data leakage  
-- Rebuilt model balances precision and recall for retention campaigns
+- Original model accuracy was off in real word setting (deployment env). 
+- Rebuilt model balances precision and recall for retention campaigns.
 
 ## Tech Stack
 
