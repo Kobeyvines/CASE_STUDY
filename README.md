@@ -77,5 +77,4 @@ data/01-raw/
 - **Libraries:** Pandas, Scikit-Learn, Matplotlib, Seaborn  
 - **Environment:** Jupyter Notebooks  
 
-**Author:** Kobeyvines  
-**Status:** Completed - February 2026
+**Author:** Brian Irungu
